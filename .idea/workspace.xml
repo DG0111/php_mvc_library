@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cd2c3bf1-2aec-4f4b-92c2-f1cd482b72fd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/jenssegers/blade" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/events" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/vendor/phroute/phroute" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/view" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/database" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1YDEfKWICLhzo4PLnLNGAWQAmwT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/commons" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\baiTap1\commons" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd2c3bf1-2aec-4f4b-92c2-f1cd482b72fd" name="Default Changelist" comment="" />
+      <created>1582468867807</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582468867807</updated>
+      <workItem from="1582468872430" duration="10446000" />
+      <workItem from="1582507011423" duration="10235000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582509953849">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1582509953849" />
+    <state x="413" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582512075318">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1582512075318" />
+    <state x="693" y="308" key="NewPhpClassDialog" timestamp="1582509877183">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="693" y="308" key="NewPhpClassDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1582509877183" />
+    <state x="517" y="295" key="NewPhpFileDialog" timestamp="1582515912735">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="517" y="295" key="NewPhpFileDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1582515912735" />
+    <state x="391" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1582507013681">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="391" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1582507013681" />
+    <state x="1366" y="0" width="1082" height="716" maximized="true" key="dock-window-1" timestamp="1582512545618">
+      <screen x="1366" y="0" width="1360" height="728" />
+    </state>
+    <state x="1366" y="0" width="1082" height="716" maximized="true" key="dock-window-1/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1582512545618" />
+    <state x="1641" y="100" width="1082" height="716" maximized="true" key="dock-window-2" timestamp="1582509416486">
+      <screen x="1366" y="0" width="1360" height="728" />
+    </state>
+    <state x="1641" y="100" width="1082" height="716" maximized="true" key="dock-window-2/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1582509416486" />
+  </component>
+</project>

@@ -1,0 +1,16 @@
+{
+    "name": "ngovanlong/bai-tap1",
+    "description": "du an nay la bai tap cua thay thien giao",
+    "require": {
+        "phroute/phroute": "^2.1",
+        "jenssegers/blade": "^1.2",
+        "illuminate/database": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Models\\": "app/models/",
+            "Commons\\": "commons/",
+            "Controllers\\": "app/controllers/"
+        }
+    }
+}
