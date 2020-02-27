@@ -1,6 +1,7 @@
 <?php
 
 define("BASE_URL", "http://localhost/baiTap1/");
+define("ADMIN_ASSET_URL", "http://localhost/baiTap1/public/admin/");
 
 
 function dd($val){
