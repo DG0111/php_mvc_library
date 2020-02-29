@@ -1,6 +1,5 @@
-@extends('layouts.admin')
-@section('content')
-    <form id="add-brand-form" action="{{BASE_URL . 'brand/save-add-brand'}}" method="post"
+<?php $__env->startSection('content'); ?>
+    <form id="add-brand-form" action="<?php echo e(BASE_URL . 'brand/save-add-brand'); ?>" method="post"
           enctype="multipart/form-data">
         <h3>Thêm mới thương hiệu</h3>
         <div class="row">
@@ -32,9 +31,9 @@
             </div>
         </div>
     </form>
-@stop
+<?php $__env->stopSection(); ?>
 
-@section('scripts')
+<?php $__env->startSection('scripts'); ?>
     <script>
         function encodeImageFileAsURL(element) {
             var file = element.files[0];
@@ -66,7 +65,7 @@
                         rangelength: [4, 100],
                         remote:
                             {
-                                url: "{{BASE_URL . 'brand/check-brand-name'}}",
+                                url: "<?php echo e(BASE_URL . 'brand/check-brand-name'); ?>",
                                 type: "post",
                                 data:
                                     {
@@ -104,4 +103,6 @@
             });
         });
     </script>
-@stop
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\baiTap2\app\views/admin/brand/addForm.blade.php ENDPATH**/ ?>

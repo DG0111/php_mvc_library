@@ -1,6 +1,5 @@
-@extends('layouts.admin')
-@section('content')
-    <form id="edit-brand-form" action="{{BASE_URL . 'brand/save-edit-brand'}}" method="post"
+<?php $__env->startSection('content'); ?>
+    <form id="edit-brand-form" action="<?php echo e(BASE_URL . 'brand/save-edit-brand'); ?>" method="post"
           enctype="multipart/form-data">
         <h3>Thêm mới thương hiệu</h3>
 
@@ -8,19 +7,19 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <input type="" hidden name="id" value="{{$brand->id}}">
+                    <input type="" hidden name="id" value="<?php echo e($brand->id); ?>">
                     <label>Tên nhãn hiệu<span class="text-danger">*</span></label>
-                    <input value="{{$brand->brand_name}}" type="text" class="form-control" name="brand_name">
+                    <input value="<?php echo e($brand->brand_name); ?>" type="text" class="form-control" name="brand_name">
                 </div>
                 <div class="form-group">
                     <label>Đất nước<span class="text-danger">*</span></label>
-                    <input value="{{$brand->country}}" type="text" class="form-control" name="country">
+                    <input value="<?php echo e($brand->country); ?>" type="text" class="form-control" name="country">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-8 offset-2">
-                        <img id="preview-img" src="{{BASE_URL . $brand->logo}}"
+                        <img id="preview-img" src="<?php echo e(BASE_URL . $brand->logo); ?>"
                              class="img-fluid">
                     </div>
                 </div>
@@ -35,14 +34,14 @@
             </div>
         </div>
     </form>
-@stop
+<?php $__env->stopSection(); ?>
 
-@section('scripts')
+<?php $__env->startSection('scripts'); ?>
     <script>
         function encodeImageFileAsURL(element) {
             var file = element.files[0];
             if (file === undefined) {
-                $('#preview-img').attr('src', "{{BASE_URL . $brand->logo}}");
+                $('#preview-img').attr('src', "<?php echo e(BASE_URL . $brand->logo); ?>");
             } else {
                 var reader = new FileReader();
                 reader.onloadend = function () {
@@ -77,7 +76,7 @@
                             rangelength: [4, 100],
                             remote:
                                 {
-                                    url: "{{BASE_URL . 'brand/check-brand-name'}}",
+                                    url: "<?php echo e(BASE_URL . 'brand/check-brand-name'); ?>",
                                     type: "post",
                                     data:
                                         {
@@ -116,4 +115,6 @@
             });
         });
     </script>
-@stop
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\baiTap2\app\views/admin/brand/editForm.blade.php ENDPATH**/ ?>

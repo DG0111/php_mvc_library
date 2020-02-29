@@ -2,20 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd2c3bf1-2aec-4f4b-92c2-f1cd482b72fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/BrandController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/home.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/layouts.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/product/addForm.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/product/editForm.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/AdminController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/BaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/ProductsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Categories.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Products.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/brand/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/products/addForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/brand/addForm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/products/editForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/brand/editForm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/admin_sitebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/admin_sitebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commons/Routing.php" beforeDir="false" afterPath="$PROJECT_DIR$/commons/Routing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commons/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/commons/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commons/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/commons/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/19a5500da1c69274518610411b1f88171e73de56.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/70a3c5ba65ed2acc7e99142e645ae949535deb68.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/7ab6bbf739132b29b259e12c34976f81f45663bc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/c788b6ca3d6379fd162b5b016e3fe89698812587.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/2f8fc7fa5d34ef758f54e8c2fd7bb3219338ef92.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/3703adfde08dd71dfe23d9e2bf56011276718838.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/39269fdaed6b2cd7bf2dddf20bd85f5099737afa.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/3c0da8e2b1f486cdfd140bff194585c9a0f790d9.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/3e6d952302e0268dd74393bd59c477e7c4673524.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/42706e52e416c211bfcc5fe956e2b6490e730021.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/755c45b27b6ef4477d05ef1304dbbee362f34fec.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/98e200b6e8f3417257c7fddb7b0459f31786022b.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/aa13cb557973309ff06a67d74db325eff9aa8631.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/fbd670cca3006f94234835e04c52f5c29a1bb7c7.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,13 +79,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/admin/car" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\baiTap2\app\views\admin\brand" />
       <recent name="C:\xampp\htdocs\baiTap1\app\views\layouts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\baiTap2\app\views\admin\car" />
       <recent name="C:\xampp\htdocs\baiTap1\public\admin" />
       <recent name="C:\xampp\htdocs\baiTap1\commons" />
     </key>
@@ -110,6 +123,9 @@
       <workItem from="1582642018070" duration="7880000" />
       <workItem from="1582695203810" duration="3305000" />
       <workItem from="1582709734286" duration="6273000" />
+      <workItem from="1582819921320" duration="7323000" />
+      <workItem from="1582870613983" duration="5784000" />
+      <workItem from="1582898455202" duration="11574000" />
     </task>
     <servers />
   </component>
@@ -121,26 +137,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1582509953849" />
-    <state x="1777" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582622921544">
-      <screen x="1366" y="0" width="1360" height="728" />
+    <state x="413" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582873316189">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1582512075318" />
     <state x="1777" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1582622921544" />
-    <state x="2056" y="308" key="NewPhpClassDialog" timestamp="1582620300071">
-      <screen x="1366" y="0" width="1360" height="728" />
+    <state x="413" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582873316189" />
+    <state x="693" y="308" key="NewPhpClassDialog" timestamp="1582873262532">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="693" y="308" key="NewPhpClassDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1582509877183" />
     <state x="2056" y="308" key="NewPhpClassDialog/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1582620300071" />
+    <state x="693" y="308" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1582873262532" />
     <state x="1715" y="333" key="NewPhpFileDialog" timestamp="1582623266189">
       <screen x="1366" y="0" width="1360" height="728" />
     </state>
     <state x="708" y="240" key="NewPhpFileDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1582526076369" />
     <state x="1715" y="333" key="NewPhpFileDialog/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1582623266189" />
-    <state x="391" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1582710025311">
+    <state x="391" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1582898460103">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="391" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1582710025311" />
     <state x="1755" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1582617642819" />
+    <state x="391" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582898460103" />
     <state x="77" y="78" width="1082" height="716" key="dock-window-1" timestamp="1582695225446">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -182,7 +201,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/views/layouts/admin_sitebar.blade.php</url>
-          <line>35</line>
+          <line>31</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

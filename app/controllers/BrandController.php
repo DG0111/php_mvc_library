@@ -4,7 +4,7 @@ namespace Controllers;
 
 use Models\Brand;
 
-class AdminController extends BaseController
+class BrandController extends BaseController
 {
     public function index()
     {
@@ -72,11 +72,10 @@ class AdminController extends BaseController
 
 
         $brand->fill($requestDate);
-        dd(1);
 
         $msg = $brand->save() == true ? 'Cập nhật thông tin thành công' : 'Cập nhật thông tin thất bại';
 
-        header('location: ' . BASE_URL . 'admin?msg=Bạn đã sửa thành công');
+        header('location: ' . BASE_URL . 'brand?msg=Bạn đã sửa thành công');
 
         die;
     }
@@ -94,6 +93,13 @@ class AdminController extends BaseController
         }
 
         echo $existed == 0 ? "true" : "false";
+    }
+
+    public function search()
+    {
+        $key = $_GET['search'];
+        $brand = Brand::search($key)->get();
+        $this->render('admin.brand.index', compact('brand'));
     }
 
 

@@ -2,34 +2,35 @@
 
 @section('content')
     <div class=".container-fluid">
-        <div>
-            <form action="{{BASE_URL . 'brand/search'}}" method="get">
-                <input required name="search" placeholder="Tìm Kiếm" type="text">
-                <button class="btn-danger" type="submit">SEARCH</button>
-            </form>
-        </div>
+
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th scope="col">Id</th>
+                <th scope="col">brand_id</th>
                 <th scope="col">Name</th>
-                <th scope="col">Logo</th>
-                <th scope="col">Country</th>
-                <th scope="col"><a class="btn btn-sm btn-success" href="{{BASE_URL . 'brand/add-brand'}}">Add
-                        brand</a></th>
+                <th scope="col">image</th>
+                <th scope="col">price</th>
+                <th scope="col">sale price</th>
+                <th scope="col">detail</th>
+                <th scope="col">quantity</th>
+                <th scope="col"><a class="btn btn-sm btn-success" href="{{BASE_URL . 'car/add-car'}}">Add
+                        car</a></th>
             </tr>
             </thead>
             <tbody>
-            @foreach($brand as $brand)
+            @foreach($car as $car)
                 <tr>
-                    <th scope="row">{{$brand->id}}</th>
-                    <td>{{$brand->brand_name}}</td>
-                    <td><img src="{{$brand->logo}}" width="100px" alt=""></td>
-                    <td>{{$brand->country}}</td>
+                    <th scope="row">{{$car->brand_id}}</th>
+                    <td>{{$car->model_name}}</td>
+                    <td><img src="{{$car->image}}" width="100px" alt=""></td>
+                    <td>{{$car->price}}</td>
+                    <td>{{$car->sale_price}}</td>
+                    <td>{{$car->detail}}</td>
+                    <td>{{$car->quantity}}</td>
                     <td class="">
-                        <a class="btn btn-sm btn-info" href="{{BASE_URL . "brand/edit-brand/$brand->id"}}">Edit</a>
+                        <a class="btn btn-sm btn-info" href="{{BASE_URL . "car/edit-car/$car->id"}}">Edit</a>
                         <a class="btn btn-sm btn-danger btn-remove"
-                           href="{{BASE_URL . "brand/remove-brand/$brand->id"}}">Delete</a>
+                           href="{{BASE_URL . "car/remove-car/$car->id"}}">Delete</a>
                     </td>
                 </tr>
             @endforeach

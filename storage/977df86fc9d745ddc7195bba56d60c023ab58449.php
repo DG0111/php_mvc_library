@@ -3,7 +3,7 @@
         <li class="nav-item nav-profile">
               <span class="nav-link" href="#">
                 <div class="profile-image online">
-                  <img src="{{ADMIN_ASSET_URL}}images/faces/face20.jpg"/>
+                  <img src="<?php echo e(ADMIN_ASSET_URL); ?>images/faces/face20.jpg"/>
                 </div>
                 <p>
                   NGO VAN LONG
@@ -17,13 +17,13 @@
             <span class="nav-link">Danh sách</span>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{BASE_URL . 'brand'}}">
+            <a class="nav-link" href="<?php echo e(BASE_URL . 'brand'); ?>">
                 <i class="ti-package menu-icon"></i>
                 <span class="menu-title">Brands</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{BASE_URL . 'car'}}">
+            <a class="nav-link" href="<?php echo e(BASE_URL . 'car'); ?>">
                 <i class="ti-menu-alt menu-icon"></i>
                 <span class="menu-title">Cars</span>
             </a>
@@ -31,3 +31,4 @@
 
     </ul>
 </nav>
+<?php /**PATH C:\xampp\htdocs\baiTap2\app\views/layouts/admin_sitebar.blade.php ENDPATH**/ ?>

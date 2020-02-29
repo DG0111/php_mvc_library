@@ -1,29 +1,51 @@
 @extends('layouts.admin')
 @section('content')
-    <form id="add-brand-form" action="{{BASE_URL . 'brand/save-add-brand'}}" method="post"
+    <form id="edit-car-form" action="{{BASE_URL . 'car/save-edit-car'}}" method="post"
           enctype="multipart/form-data">
-        <h3>Thêm mới thương hiệu</h3>
+        <h3>Thêm mới car</h3>
         <div class="row">
             <div class="col-md-6">
+                <input type="text" hidden name="id" value="{{$car->id}}">
                 <div class="form-group">
-                    <label>Tên nhãn hiệu<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" name="brand_name">
+                    <label>Name car<span class="text-danger">*</span></label>
+                    <input type="text" value="{{$car->model_name}}" class="form-control" name="model_name">
                 </div>
                 <div class="form-group">
-                    <label>Đất nước<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" name="country">
+                    <label for="">Danh mục</label>
+                    <select name="brand_id" class="form-control">
+                        @foreach ($brand as $brand)
+                            <option value="{{$brand->id}}">{{$brand->brand_name}}</option>
+                        @endforeach
+                    </select>
                 </div>
+                <div class="form-group">
+                    <label>price<span class="text-danger">*</span></label>
+                    <input value="{{$car->price}}" type="text" class="form-control" name="price">
+                </div>
+                <div class="form-group">
+                    <label>sale price<span class="text-danger">*</span></label>
+                    <input value="{{$car->sale_price}}" type="text" class="form-control" name="sale_price">
+                </div>
+                <div class="form-group">
+                    <label>Detail<span class="text-danger">*</span></label>
+                    <input value="{{$car->detail}}" type="text" class="form-control" name="detail">
+                </div>
+                <div class="form-group">
+                    <label>Quantity<span class="text-danger">*</span></label>
+                    <input value="{{$car->quantity}}" type="text" class="form-control" name="quantity">
+                </div>
+
             </div>
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-8 offset-2">
-                        <img id="preview-img" src="<?= BASE_URL . 'public/images/default-image.jpg'?>"
+                        <img id="preview-img" src="{{BASE_URL . $car->image}}"
                              class="img-fluid">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="">Ảnh đại diện sản phẩm<span class="text-danger">*</span></label>
-                    <input type="file" onchange="encodeImageFileAsURL(this)" class="form-control" name="logo">
+                    <input type="file" onchange="encodeImageFileAsURL(this)" class="form-control" name="image">
                 </div>
             </div>
             <div class="col-12 d-flex justify-content-end">
@@ -58,48 +80,55 @@
              * đánh giá: không bắt buộc nhập, nếu nhập thì phải là số, và không âm
              * ảnh đại diện: bắt buộc, phải có đuôi là định dạng ảnh (jpg, png, jpeg, gif)
              */
-            $('#add-brand-form').validate({
+            $('#edit-car-form').validate({
                 // quy định bắt lỗi (nếu vi phạm thì hiển thị lỗi)
                 rules: {
-                    brand_name: {
+                    model_name: {
                         required: true,
                         rangelength: [4, 100],
                         remote:
                             {
-                                url: "{{BASE_URL . 'brand/check-brand-name'}}",
+                                url: "{{BASE_URL . 'car/check-car-name'}}",
                                 type: "post",
                                 data:
                                     {
+                                        id: function () {
+                                            return $('#edit-car-form :input[name="id"]').val();
+                                        },
                                         name: function () {
-                                            return $('#add-brand-form :input[name="brand_name"]').val();
-                                        }
+                                            return $('#edit-car-form :input[name="model_name"]').val();
+                                        },
                                     },
                             },
                     },
-                    logo: {
-                        required: true,
+                    image: {
                         accept: "image/*",
                     },
-                    country: {
+                    detail: {
+                        required: true,
+                    },
+                    price: {
                         required: true,
                     }
                 },
                 // Text của lỗi sẽ hiển thị ra ngoài
                 messages: {
-                    brand_name: {
+                    model_name: {
                         required: "Hãy nhập tên nhãn hiệu",
                         rangelength: "tên nhãn hiệu nằm trong khoảng 4-10 ký tự",
                         remote: "Tên nhãn hiệu đã tồn tại",
                     },
 
-                    logo: {
+                    image: {
                         accept: "Sai định dạng ảnh",
-                        required: "Hãy chọn ảnh nhãn hiệu",
 
                     },
-                    country: {
+                    detail: {
                         required: "Hãy nhập đất nước !",
-                    }
+                    },
+                    price: {
+                        required: "Hãy nhập đất nước !",
+                    },
                 }
             });
         });

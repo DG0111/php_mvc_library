@@ -1,9 +1,9 @@
-@extends('layouts.admin');
+;
 
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class=".container-fluid">
         <div>
-            <form action="{{BASE_URL . 'brand/search'}}" method="get">
+            <form action="<?php echo e(BASE_URL . 'brand/search'); ?>" method="get">
                 <input required name="search" placeholder="Tìm Kiếm" type="text">
                 <button class="btn-danger" type="submit">SEARCH</button>
             </form>
@@ -15,33 +15,33 @@
                 <th scope="col">Name</th>
                 <th scope="col">Logo</th>
                 <th scope="col">Country</th>
-                <th scope="col"><a class="btn btn-sm btn-success" href="{{BASE_URL . 'brand/add-brand'}}">Add
+                <th scope="col"><a class="btn btn-sm btn-success" href="<?php echo e(BASE_URL . 'brand/add-brand'); ?>">Add
                         brand</a></th>
             </tr>
             </thead>
             <tbody>
-            @foreach($brand as $brand)
+            <?php $__currentLoopData = $brand; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $brand): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
-                    <th scope="row">{{$brand->id}}</th>
-                    <td>{{$brand->brand_name}}</td>
-                    <td><img src="{{$brand->logo}}" width="100px" alt=""></td>
-                    <td>{{$brand->country}}</td>
+                    <th scope="row"><?php echo e($brand->id); ?></th>
+                    <td><?php echo e($brand->brand_name); ?></td>
+                    <td><img src="<?php echo e($brand->logo); ?>" width="100px" alt=""></td>
+                    <td><?php echo e($brand->country); ?></td>
                     <td class="">
-                        <a class="btn btn-sm btn-info" href="{{BASE_URL . "brand/edit-brand/$brand->id"}}">Edit</a>
+                        <a class="btn btn-sm btn-info" href="<?php echo e(BASE_URL . "brand/edit-brand/$brand->id"); ?>">Edit</a>
                         <a class="btn btn-sm btn-danger btn-remove"
-                           href="{{BASE_URL . "brand/remove-brand/$brand->id"}}">Delete</a>
+                           href="<?php echo e(BASE_URL . "brand/remove-brand/$brand->id"); ?>">Delete</a>
                     </td>
                 </tr>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </tbody>
         </table>
-        @if(isset($_GET['msg']))
-            <input type="hidden" id="msg" value="{{$_GET['msg']}}">
-        @endif
+        <?php if(isset($_GET['msg'])): ?>
+            <input type="hidden" id="msg" value="<?php echo e($_GET['msg']); ?>">
+        <?php endif; ?>
     </div>
-@stop
+<?php $__env->stopSection(); ?>
 
-@section('scripts')
+<?php $__env->startSection('scripts'); ?>
     <script>
         $(document).ready(function () {
             if ($('#msg').length > 0) {
@@ -72,4 +72,6 @@
             });
         });
     </script>
-@stop
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\baiTap2\app\views/admin/brand/index.blade.php ENDPATH**/ ?>
