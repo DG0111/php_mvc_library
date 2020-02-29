@@ -10,39 +10,23 @@
                 <th scope="col">Name</th>
                 {{--                <th scope="col">detail</th>--}}
                 {{--                <th scope="col">Short desc</th>--}}
-                <th scope="col">Category</th>
-                <th scope="col">Price</th>
-                <th scope="col">Image</th>
-                <th scope="col">Evaluate</th>
-                <th scope="col">Views</th>
-                <th scope="col"><a class="btn btn-sm btn-success" href="{{BASE_URL . 'admin/add-product'}}">Add
-                        product</a></th>
+                <th scope="col">Logo</th>
+                <th scope="col">Country</th>
+                <th scope="col"><a class="btn btn-sm btn-success" href="{{BASE_URL . 'admin/add-brand'}}">Add
+                        brand</a></th>
             </tr>
             </thead>
             <tbody>
-            @foreach($pro as $product)
+            @foreach($brand as $brand)
                 <tr>
-                    <th scope="row">{{$product->id}}</th>
-                    <td>{{$product->name}}</td>
-                    {{--                    <td>{{$product->detail}}</td>--}}
-                    {{--                    <td>{{$product->short_desc}}</td>--}}
-                    <td>
-                        @php
-                            $parent = $product->getCategory();
-                        @endphp
-                        @if($parent !== false)
-                            <?= $parent->cate_name; ?>
-                        @endif
-                    </td>
-                    {{--                    <td>{{$product->cate_id}}</td>--}}
-                    <td>{{$product->price}}</td>
-                    <td><img src="{{$product->image}}" width="100px" alt=""></td>
-                    <td>{{$product->star}}</td>
-                    <td>{{$product->views}}</td>
+                    <th scope="row">{{$brand->id}}</th>
+                    <td>{{$brand->brand_name}}</td>
+                    <td><img src="{{$brand->logo}}" width="100px" alt=""></td>
+                    <td>{{$brand->country}}</td>
                     <td class="">
-                        <a class="btn btn-sm btn-info" href="{{BASE_URL . "admin/edit-product/$product->id"}}">Edit</a>
+                        <a class="btn btn-sm btn-info" href="{{BASE_URL . "admin/edit-brand/$brand->id"}}">Edit</a>
                         <a class="btn btn-sm btn-danger btn-remove"
-                           href="{{BASE_URL . "admin/remove-product/$product->id"}}">Delete</a>
+                           href="{{BASE_URL . "admin/remove-brand/$brand->id"}}">Delete</a>
                     </td>
                 </tr>
             @endforeach
