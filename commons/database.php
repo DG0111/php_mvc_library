@@ -4,7 +4,7 @@ $capsule = new Capsule;
 $capsule->addConnection([
     'driver'    => 'mysql',
     'host'      => '127.0.0.1',
-    'database'  => 'pt14311-web',
+    'database'  => 'pt14314-web-assignment',
     'username'  => 'root',
     'password'  => '',
     'charset'   => 'utf8',

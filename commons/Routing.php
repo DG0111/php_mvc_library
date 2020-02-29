@@ -11,26 +11,28 @@ class Routing
     {
         $router = new RouteCollector();
 
-        $router->get('/', ['Controllers\HomeController', 'home']);
-//
-//        $router->group(['prefix' => 'products'], function ($router) {
-//            $router->get('add-product', ['Controllers\ProductsController', 'showForm']);
-//            $router->post('save-add-product', ['Controllers\ProductsController', 'saveProduct']);
-//            $router->get('remove/{id:i}', ['Controllers\ProductsController', 'remove']);
-//            $router->get('edit/{id:i}', ['Controllers\ProductsController', 'edit']);
-//            $router->post('save-edit', ['Controllers\ProductsController', 'saveEdit']);
-//        });
-
-        $router->group(['prefix' => 'admin'], function ($router) {
+        $router->group(['prefix' => 'brand'], function ($router) {
             // products
-            $router->get('/', ['Controllers\AdminController', 'index']);
-            $router->get('add-product', ['Controllers\AdminController', 'formProduct']);
-            $router->post('save-add-product', ['Controllers\AdminController', 'saveProduct']);
-            $router->get('edit-product/{id:i}', ['Controllers\AdminController', 'formEdit']);
-            $router->post('save-edit-product', ['Controllers\AdminController', 'saveEdit']);
-            $router->get('remove-product/{id:i}', ['Controllers\AdminController', 'removeProduct']);
-            $router->post('check-product-name', ['Controllers\AdminController', 'checkProductName']);
+            $router->get('/', ['Controllers\BrandController', 'index']);
+            $router->get('add-brand', ['Controllers\BrandController', 'formBrand']);
+            $router->post('save-add-brand', ['Controllers\BrandController', 'saveBrand']);
+            $router->get('edit-brand/{id:i}', ['Controllers\BrandController', 'formEdit']);
+            $router->post('save-edit-brand', ['Controllers\BrandController', 'saveEdit']);
+            $router->get('remove-brand/{id:i}', ['Controllers\BrandController', 'removeBrand']);
+            $router->post('check-brand-name', ['Controllers\BrandController', 'checkBrandName']);
+            $router->get('search', ['Controllers\BrandController', 'search']);
             // end products
+        });
+        $router->group(['prefix' => 'car'], function ($router) {
+            // cars
+            $router->get('/', ['Controllers\CarController', 'index']);
+            $router->get('add-car', ['Controllers\CarController', 'formCar']);
+            $router->post('save-add-car', ['Controllers\CarController', 'saveCar']);
+            $router->get('edit-car/{id:i}', ['Controllers\CarController', 'formEdit']);
+            $router->post('save-edit-car', ['Controllers\CarController', 'saveEdit']);
+            $router->get('remove-car/{id:i}', ['Controllers\CarController', 'removeCar']);
+            $router->post('check-car-name', ['Controllers\CarController', 'checkCarName']);
+            // end cars
         });
 
 

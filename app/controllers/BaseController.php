@@ -12,5 +12,4 @@ class BaseController
         echo $blade->make($view, $dataArr)->render();
     }
 
-
 }
